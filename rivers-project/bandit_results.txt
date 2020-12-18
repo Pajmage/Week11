@@ -1,0 +1,31 @@
+Run started:2020-12-18 11:21:06.407149
+
+Test results:
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'n0p@w1ifapfx&3t6)d0)%z4s9x0!1c3mti&0spwjq%se0w)hoy'
+   Severity: Low   Confidence: Medium
+   Location: rivers\settings.py:26
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b105_hardcoded_password_string.html
+25	# SECURITY WARNING: keep the secret key used in production secret!
+26	SECRET_KEY = 'n0p@w1ifapfx&3t6)d0)%z4s9x0!1c3mti&0spwjq%se0w)hoy'
+27	
+28	# SECURITY WARNING: don't run with debug turned on in production!
+29	DEBUG = True
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 121
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 1.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 0.0
+Files skipped (0):

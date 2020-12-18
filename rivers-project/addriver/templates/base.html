@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+
+
+{% block navbar %}
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="{% url 'river-home' %}">Add River</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'results' %}">Results</a>
+  </li>
+ </ul>
+{% endblock %}
+
+{% block content %}
+    {% block app_content %}
+    {% endblock %}
+{% endblock %}
+
+{% block scripts %}
+    {% block app_scripts %}
+    {% endblock %}
+{% endblock %}
